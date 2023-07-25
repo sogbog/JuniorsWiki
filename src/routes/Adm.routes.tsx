@@ -1,0 +1,5 @@
+export function AdmRoutes(){
+    return(
+        <></>
+    )
+}
