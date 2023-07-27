@@ -2,8 +2,9 @@ import { MdKeyboardArrowDown } from 'react-icons/md'
 
 
 
-const authenticated = false
-const user = {name: "Jooj" }
+const authenticated = true
+const user = {name: "Jooj"}
+const adm = true
 
 
 export function MobileLogin() {
@@ -25,7 +26,7 @@ export function MobileLogin() {
 
                 {authenticated ? 
                         <span className="text-center rounded-md p-1 w-full py-4">
-                            {user.name}
+                            {(adm ? "ADM " : "") + user.name}
                         </span>
                 : 
                     <div className='flex justify-center flex-col gap-1'>
