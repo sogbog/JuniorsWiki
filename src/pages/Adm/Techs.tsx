@@ -1,6 +1,6 @@
 import { ReturnArrow } from "../../components/ReturnArrow";
-import { Header } from "../../components/Adm/Header";
-import { Tech } from "../../components/Adm/Tech";
+import { Header } from "../../components/Header";
+import { Tech } from "../../components/Tech";
 import { MdEdit } from "react-icons/md";
 import { Link } from "react-router-dom";
 
@@ -18,10 +18,10 @@ export function Techs(){
         <div className="bg-snow-400 dark:bg-eerieBlack-400 font-notoSans text-eerieBlack-400 dark:text-snow-400 transition min-h-full">
             <Header/>
 
-            <div className="mx-3 mt-2 flex justify-between">
-                <ReturnArrow/>
+            <div className="mr-3 mt-2 flex justify-between">
+                <ReturnArrow href={"/JuniorsWiki"}/>
                 <Link to={"/JuniorsWiki/EditTech/" + response.name}>
-                    <MdEdit/>
+                    <MdEdit className="md:text-2xl md:mr-5 lg:text-3xl lg:mr-9"/>
                 </Link>
             </div>
             

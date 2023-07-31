@@ -1,11 +1,8 @@
 import { MdKeyboardArrowDown } from 'react-icons/md'
 
-
-
 const authenticated = true
 const user = {name: "Jooj"}
 const adm = true
-
 
 export function MobileLogin() {
 
@@ -19,7 +16,7 @@ export function MobileLogin() {
     }
 
     return(
-        <div className="md:hidden flex flex-col justify-center absolute w-full left-0 right-0 mx-auto bg-snow-500 dark:bg-eerieBlack-300">
+        <div className="md:hidden flex flex-col justify-center absolute w-full left-0 right-0 mx-auto bg-snow-500 dark:bg-eerieBlack-300 z-10">
 
             <div id='dropDown' className="flex flex-col items-center gap-1 overflow-hidden h-0 pt-2 transition-[height] duration-300">
                 
@@ -30,8 +27,8 @@ export function MobileLogin() {
                         </span>
                 : 
                     <div className='flex justify-center flex-col gap-1'>
-                        <input type="text" placeholder="username" className="bg-snow-600 dark:bg-eerieBlack-200 rounded-md p-1 text-sm placeholder:text-eerieBlack-300 placeholder:dark:text-snow-600"/>
-                        <input type="password" placeholder="password" className="bg-snow-600 dark:bg-eerieBlack-200 rounded-md p-1 text-sm placeholder:text-eerieBlack-300 placeholder:dark:text-snow-600"/>
+                        <input type="text" placeholder="username" className="bg-snow-600 dark:bg-eerieBlack-200 rounded-md p-1 text-sm placeholder:text-eerieBlack-300 placeholder:dark:text-snow-500"/>
+                        <input type="password" placeholder="password" className="bg-snow-600 dark:bg-eerieBlack-200 rounded-md p-1 text-sm placeholder:text-eerieBlack-300 placeholder:dark:text-snow-500"/>
                     </div>
                 }
 
