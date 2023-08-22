@@ -1,11 +1,31 @@
 import { Link } from "react-router-dom"
 import { Tag } from "./Tag"
+import { useState } from "react"
+import { MdImage } from "react-icons/md"
 
 export function TechCard({name, img, tags}: {name: string, img: string, tags: string[]}) {
+    
+    const [isValid, setIsValid] = useState(true)
+    
+    
     return(
-        <div className="mt-4">
+
+        <div className="mt-4 flex flex-col items-center">
             <Link to={`/JuniorsWiki/${name}`}>
-                <img className="w-28 max-h-28 rounded border border-eerieBlack-200 dark:border-snow-700 object-cover md:w-36 md:max-h-36 lg:w-40 lg:max-h-40" src={img} alt={name} width={30} height={30}/>
+
+            <div className="w-28 h-28 md:w-36 md:h-36 lg:w-40 lg:h-40 flex">
+                {
+                    isValid ? 
+
+                    <img onError={() => setIsValid(false)} className="w-28 max-h-28 rounded  object-cover md:w-36 md:max-h-36 lg:w-40 lg:max-h-40" src={img} alt={name} width={30} height={30}/>
+
+                    :
+
+                    <MdImage className="w-28 h-28 md:w-36 md:h-36 lg:w-40 lg:h-40"/>
+                }  
+            </div>
+            
+
             </Link>
 
             <Link to={`/JuniorsWiki/${name}`}>

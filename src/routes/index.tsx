@@ -1,17 +1,22 @@
-import { BrowserRouter} from "react-router-dom";
-import { AdmRoutes } from "./Adm.routes";
-import { UserRoutes } from "./User.routes";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { useUser } from "../hooks/useUser";
+import { Home } from "../pages/Home";
+import { Techs } from "../pages/Techs";
+import { NewTech } from "../pages/NewTech";
+import { EditTech } from "../pages/EditTech";
+
 
 export function AppRoutes(){
-    //const { user } = useAuth()
-    const user = {
-        isAdm: true
-    }
+    const { user } = useUser()
 
     return(
         <BrowserRouter>
-            {user.isAdm ? <AdmRoutes/> : <UserRoutes/>}
+            <Routes>
+                <Route path='/JuniorsWiki' element={<Home/>}/>
+                <Route path='/JuniorsWiki/:name' element={<Techs/>}/>
+                <Route path="/JuniorsWiki/NewTech" element={<NewTech/>}/>
+                <Route path="/JuniorsWiki/EditTech/:name" element={<EditTech/>}/>
+            </Routes>
         </BrowserRouter>
     )
-
 }
