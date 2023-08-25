@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { useUser } from "../hooks/useUser";
 import { Home } from "../pages/Home";
 import { Techs } from "../pages/Techs";
 import { NewTech } from "../pages/NewTech";
@@ -7,7 +6,6 @@ import { EditTech } from "../pages/EditTech";
 
 
 export function AppRoutes(){
-    const { user } = useUser()
 
     return(
         <BrowserRouter>
